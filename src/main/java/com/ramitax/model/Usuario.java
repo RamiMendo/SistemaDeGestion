@@ -1,5 +1,6 @@
 package com.ramitax.model;
 
+import com.ramitax.Enum.Estado;
 import jakarta.persistence.*;
 import lombok.*;
 
