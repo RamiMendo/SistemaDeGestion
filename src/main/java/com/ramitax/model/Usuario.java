@@ -4,7 +4,6 @@ import com.ramitax.Enum.Estado;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
 @Setter
 @Getter
 @NoArgsConstructor
@@ -17,12 +16,16 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(unique = true, nullable = false)
     private int id;
+
     @Column(nullable = false, length = 50)
     private String personName;
+
     @Column(nullable = false, length = 15)
     private String userName;
+
     @Column(nullable = false, length = 10)
     private String password;
+
     @Column(nullable = false)
     private Estado estado;
 
