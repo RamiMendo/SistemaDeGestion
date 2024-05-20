@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 @Entity
 @Table(name="articulos_comestibles")
-public class Comestibles extends Articulo{
+public class Comestible extends Articulo{
 
     @Column(nullable = false, name = "ean")
     private String EAN;
