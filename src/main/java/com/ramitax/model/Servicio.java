@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Entity
 @Table(name="articulos_servicios")
-public class Servicios extends Articulo{
+public class Servicio extends Articulo{
 
     @Column(nullable = false, name = "cuenta")
     private Double cuenta;
