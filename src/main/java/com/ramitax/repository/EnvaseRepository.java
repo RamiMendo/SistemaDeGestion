@@ -1,4 +1,8 @@
 package com.ramitax.repository;
 
-public interface EnvaseRepository {
-}
+import com.ramitax.model.Envase;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EnvaseRepository extends JpaRepository<Envase,Integer> {}
