@@ -22,11 +22,18 @@ public class EnvaseService {
         return envaseRepository.findById(id);
     }
 
-    public Envase addEnvase(Envase envase){
-        return envaseRepository.save(envase);
+    public void addEnvase(Envase envase){
+        envaseRepository.save(envase);
     }
 
     public void deleteEnvase(Integer id){
+        Optional<Envase> envase = envaseRepository.findById(id);
+        if (envase.isPresent()){
+            envaseRepository.delete(envase.get());
+        }
+    }
 
+    public Envase updateEnvase(Envase envase){
+        return envaseRepository.save(envase);
     }
 }
