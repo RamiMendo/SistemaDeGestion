@@ -22,8 +22,8 @@ public class EnvaseService {
         return envaseRepository.findById(id);
     }
 
-    public void addEnvase(Envase envase){
-        envaseRepository.save(envase);
+    public Envase addEnvase(Envase envase){
+        return envaseRepository.save(envase);
     }
 
     public void deleteEnvase(Integer id){
