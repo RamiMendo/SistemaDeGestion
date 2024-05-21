@@ -2,6 +2,7 @@ package com.ramitax.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.*;
 
@@ -22,13 +23,7 @@ public class Comestible extends Articulo{
     @Column(nullable = false, name = "categoria")
     private Integer categoria;
 
-    @Column(nullable = false, name = "envase_primario")
-    private Integer envasePrimario;
-
-    @Column(nullable = true, name = "envase_secundaio")
-    private Integer envaseSecundario;
-
-    @Column(nullable = false, name = "cantidad_envase")
-    private Integer cantidadEnvase;
+    @OneToOne
+    private Envase envase;
 
 }
